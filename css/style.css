@@ -1,19 +1,74 @@
+/* ===============================
+   1. Переменные проекта
+   =============================== */
+:root {
+  /* Основные цвета проекта */
+  --color-bg: #F0FDF4; /*фон всей страницы */
+  --color-text: #14532D; /*основной цвет текста */
+  --color-text-surface: #F0FDF4; /*цвет текста на темных поверхностях*/
+  --color-muted: #5B6B5F; /*цвет подсказок*/
+  --color-primary: #166534; /*цвет кнопок, ссылок, границ*/
+  --color-primary-dark:  #0F3D22; /*затемненный акцент для конпок и ссылок*/
+  --color-border: #D6E4D9; /*цвет границ карточек и ссылок*/
+  --color-surface: #166534; /*цвет подвала и инфоблоков*/
+  --color-surface-accent: #DCFCE7; /*светлая акцентая поверхность*/
+  --color-danger: #B00020; /*цвет ошибки*/
+  --color-success: #168a2f; /**/
+  --color-success-bg: #DCFCE7; /*цвет вывода об успехе*/
+  --color-white: #ffffff; /* чистый белый*/
+
+  /* Отступы */
+  --space-xs: 4px; /**/
+  --space-sm: 8px; /**/
+  --space-md: 16px; /**/
+  --space-lg: 24px; /**/
+  --space-xl: 32px; /**/
+
+  /* Скругления */
+  --radius-sm: 6px; /**/
+  --radius-md: 8px; /**/
+  --radius-lg: 12px; /**/
+
+  /* Размеры */
+  --container-width: 1100px; /**/
+}
+
+
+/* ===============================
+   2. Базовые стили
+   =============================== */
+
+/* 
+  Универсальное правило для всех элементов.
+  border-box делает расчёт размеров более понятным:
+  width включает content, padding и border.
+*/
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.5;
+  color: var (--color-text);
+  background-color: var (--color-bg);
 }
 
 header, main, footer {
-  padding: 20px;
+  padding: var (--space-lg);
+
+
 }
 
 header {
-  background-color: #f2f2f2;
+  background-color: var (--color-success);
+
 }
 
 footer {
-  background-color: #f2f2f2;
+  background-color: var (--color-surface);
+  color: var (--color-text-surface);
 }
 
 section {
@@ -22,4 +77,272 @@ section {
 
 section h2 {
   margin-top: 0;
+}
+
+/* ===============================
+   3. Общие элементы интерфейса
+   =============================== */
+
+   a { /* а задает базовый цвет ссылок */
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/*
+  Ограничиваем ширину содержимого шапки,
+  чтобы оно не растягивалось слишком сильно на широких экранах.
+*/
+.site-header {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*
+  Оформляем текстовый логотип.
+*/
+.site-logo {
+  font-weight: bold;
+  text-decoration: none;
+  color: #222222;
+}
+
+/*
+  Убираем стандартные отступы и маркеры списка навигации.
+*/
+.site-nav__list {
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+
+/*
+  Добавляем расстояние между пунктами меню.
+*/
+.site-nav__list li {
+  margin-bottom: 8px;
+}
+
+/*
+  Оформляем ссылки меню.
+*/
+.site-nav__list a {
+  color: #0057b8;
+  text-decoration: none;
+}
+
+/*
+  При наведении мыши подчёркиваем ссылку.
+  Подробно состояния интерфейса будут рассмотрены в практической работе 1.7.
+*/
+.site-nav__list a:hover {
+  text-decoration: underline
+}
+
+/*
+  Пока это обычная ссылка, но визуально она оформляется как кнопка.
+*/
+.button {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+/*
+  Простое состояние наведения для кнопки.
+*/
+.button:hover {
+  background-color:var(--color-primary-dark);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ===============================
+   4. Компоненты страницы
+   =============================== */
+
+/*
+  Hero-блок — первый крупный блок страницы.
+  Он визуально отделяется от остальных разделов фоном и отступами.
+*/
+.hero {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-xl) var(--space-lg);
+  background-color: var(--color-surface-accent);
+  border-radius: var(--radius-lg);
+}
+
+/*
+  Общий класс для разделов страницы.
+*/
+.section {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+}
+
+/*
+  Убираем лишний верхний отступ у заголовков разделов.
+*/
+.section h2 {
+  margin-top: 0;
+}
+
+/*
+  Карточка товара — самостоятельный блок.
+  На следующих занятиях карточки будут доработаны и выстроены в сетку.
+*/
+.product-card {
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+}
+
+.product-card:hover {
+  border-color: var(--color-primary);
+}
+
+/*
+  Убираем лишний верхний отступ у заголовка карточки.
+*/
+.product-card h3 {
+  margin-top: 0;
+}
+
+/*
+  Дополнительный информационный блок.
+*/
+.aside-info {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-md);
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+/*
+  Сообщение об успешной отправке.
+*/
+.success-message {
+  max-width: var(--container-width);
+  margin: var(--space-lg) auto;
+  padding: var(--space-md);
+  border-left: 4px solid var(--color-succes);
+  background-color: var(--color-succes-bg);
+}
+
+/* ===============================
+   5. Форма и модальное окно
+   =============================== */
+
+/*
+  Модальное окно.
+  Элемент dialog сам умеет открываться поверх страницы.
+*/
+.order-dialog {
+  width: min(100% - 32px, 560px);
+  padding: var(--space-lg);
+  border: none;
+  border-radius: var(--radius-lg);
+}
+
+/*
+  Затемнение фона за модальным окном.
+*/
+.order-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*
+  Поле формы.
+  Каждый блок получает нижний отступ.
+*/
+.form-field {
+  margin-bottom: var(--space-md);
+}
+
+/*
+  Подпись поля.
+*/
+.form-field label {
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+/*
+  Основные поля формы.
+*/
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+}
+
+/*
+  Checkbox не должен занимать всю ширину.
+*/
+.form-field input[type="checkbox"] {
+  width: auto;
+}
+
+/*
+  Подсказка под полем телефона.
+*/
+.form-field small {
+  display: block;
+  margin-top: var(--space-xs);
+  color: var (--color-muted);
+}
+
+/*
+  Видимый фокус для клавиатурной навигации.
+*/
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible,
+.form-actions button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/*
+  Подсветка ошибочных полей.
+  Атрибут aria-invalid будет добавляться через JavaScript.
+*/
+[aria-invalid="true"] {
+  border-color:var(--color-danger);
+}
+
+/*
+  Кнопки формы.
+*/
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
 }
