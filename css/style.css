@@ -171,9 +171,9 @@ a:focus-visible {
 /* --- Сетка карточек --- */
 .products-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Карточки в один столбец */
+  grid-template-columns: repeat(2, 1ft); /* Карточки в один столбец */
   gap: var(--space-lg);
-  max-width: 600px; /* Чтобы карточки не были на весь экран */
+  max-width: 800px; /* Чтобы карточки не были на весь экран */
   margin: 0 auto; /* Центрируем сетку */
 }
 
@@ -207,7 +207,7 @@ a:focus-visible {
 .product-card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Картинка заполняет блок без искажений */
+  object-fit: contain; 
 }
 
 /* --- Текст в карточке --- */
