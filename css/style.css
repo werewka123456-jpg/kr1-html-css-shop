@@ -195,7 +195,7 @@ a:focus-visible {
 /* --- Картинки в карточках --- */
 .product-card__media {
   width: 100%;
-  height: 250px;
+  height: 300px;
   margin-bottom: var(--space-md);
   background-color: var(--color-surface-accent);
   display: flex;
