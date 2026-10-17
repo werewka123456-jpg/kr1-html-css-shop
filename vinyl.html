@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Виниловые пластинки в учебном интернет-магазине.">
+  <title>Виниловые пластинки – Music Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Music Shop</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="vinyl.html">Винил</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Виниловые пластинки</span>
+    </nav>
+
+    <section class="section">
+      <h1>Виниловые пластинки</h1>
+      <p>Откройте для себя мир аналогового звука. В этом разделе собраны редкие и классические издания.</p>
+      
+      <div class="products-grid">
+        <!-- Первая карточка -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <img class="product-card__image" src="images/vinil_arctic.jpg" alt="Пластинка 1">
+          </div>
+          <h3 class="product-card__title">Arctic Monkeys — AM</h3>
+          <p class="product-card__description">Пятый студийный альбом британской группы, ставший абсолютной классикой современного рока. Хип-хоп биты, тяжелый грув и узнаваемый вокал Алекса Тёрнера. Включает легендарные хиты «Do I Wanna Know?» и «R U Mine?».</p>
+          <p class="product-card__price">4 500 руб.</p>
+          <a class="button button--primary product-card__button" href="product-vinyl1.html">Подробнее</a>
+        </article>
+
+        <!-- Вторая карточка -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <img class="product-card__image" src="images/vinil_Lana.jpg" alt="Пластинка 2">
+          </div>
+          <h3 class="product-card__title">Billie Eilish - Happier Than Ever</h3>
+          <p class="product-card__description">Второй студийный альбом Билли Айлиш, который показывает её с новой, более взрослой и уязвимой стороны. Сочетание нежного вокала, мрачных синтезаторов и честных текстов. Включает хиты «Happier Than Ever» и «Therefore I Am»</p>
+          <p class="product-card__price">5 200 руб.</p>
+          <a class="button button--primary product-card__button" href="product-vinyl2.html">Подробнее</a>
+        </article>
+
+        <!-- Третья карточка -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <img class="product-card__image" src="images/vinil_Billie.jpg" alt="Пластинка 3">
+          </div>
+          <h3 class="product-card__title">Lana Del Rey - Born To Die</h3>
+          <p class="product-card__description">Дебютный альбом Ланы Дель Рей, ставший мгновенной классикой. Смесь кинематографичного попа, грустных баллад и ретро-эстетики. Включает легендарные хиты «Video Games», «Born To Die» и «Blue Jeans».</p>
+          <p class="product-card__price">5 200 руб.</p>
+          <a class="button button--primary product-card__button" href="product-vinyl3.html">Подробнее</a>
+        </article>
+
+        <!-- Четвертая карточка -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <img class="product-card__image" src="images/vinil_Neighbourhood.jpg" alt="Пластинка 4">
+          </div>
+          <h3 class="product-card__title">The Neighbourhood - Wiped Out!</h3>
+          <p class="product-card__description">Второй студийный альбом калифорнийской группы, который погружает в атмосферу ночного города. Смесь инди-рока, трип-хопа и меланхоличных гитарных риффов. Включает треки «Daddy Issues» и «The Beach».</p>
+          <p class="product-card__price">5 200 руб.</p>
+          <a class="button button--primary product-card__button" href="product-vinyl4.html">Подробнее</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  </footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" required>
+      </div>
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить</button>
+      </div>
+    </form>
+  </dialog>
+  <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
+
+</body>
+</html>
