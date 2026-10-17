@@ -329,3 +329,33 @@ a:focus-visible {
   color: var(--color-muted);
   margin-bottom: var(--space-lg);
 }
+
+/* ===============================
+   8. Хлебные крошки и заголовок товара
+   =============================== */
+
+/* Делаем так, чтобы крошки занимали всю ширину и переносили следующий блок на новую строку */
+.breadcrumbs {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--space-lg); /* Отступ снизу до заголовка */
+  font-size: 14px; /* Размер шрифта самих крошек */
+  color: var(--color-muted);
+}
+
+.breadcrumbs__link {
+  color: var(--color-primary);
+  margin-right: 5px;
+}
+
+.breadcrumbs__current {
+  color: var(--color-muted);
+  margin-left: 5px;
+}
+
+/* Увеличиваем заголовок товара (h1 внутри блока с товаром) */
+.product-detail__info h1 {
+  font-size: 3.2rem; /* Делаем шрифт больше */
+  margin-top: 0;     /* Убираем лишний отступ сверху */
+  margin-bottom: var(--space-md);
+}
