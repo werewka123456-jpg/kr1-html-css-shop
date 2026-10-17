@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Колонка JBL Flip 5 — подробная информация.">
+  <title>Колонка JBL Flip 5 – Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="index.html#popular">Каталог</a>
+      <span class="breadcrumbs__current">Колонка JBL Flip 5</span>
+    </nav>
+
+    <section class="section">
+      <div class="product-detail">
+        <!-- Картинка товара -->
+        <div class="product-detail__media">
+          <img class="product-detail__image" src="images/flip5.jpg" alt="Колонка JBL Flip 5">
+        </div>
+        
+        <!-- Информация о товаре -->
+        <div class="product-detail__info">
+          <h1>Колонка JBL Flip 5</h1>
+          <p class="product-detail__price">9 990 руб.</p>
+          <p class="product-detail__desc">Портативная колонка с мощным звуком и защитой от воды. Идеально подходит для прогулок и путешествий.</p>
+          
+          <button class="button button--primary" type="button" data-product="Колонка JBL Flip 5">Заказать</button>
+          <a class="button button--secondary" href="index.html">← Назад на главную</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  </footer>
+
+  <!-- Модальное окно (добавляем его на страницу товара, чтобы кнопка "Заказать" работала) -->
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" required>
+      </div>
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить</button>
+      </div>
+    </form>
+  </dialog>
+  <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
+
+</body>
+</html>
