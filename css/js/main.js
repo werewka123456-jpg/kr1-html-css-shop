@@ -1,73 +1,103 @@
-// Получаем модальное окно по id.
-const orderDialog = document.getElementById('order-dialog');
+'use strict';
+document.addEventListener('DOMContentLoaded', () => {
+  const dialog = document.getElementById('order-dialog');
+  const toast = document.getElementById('success-message');
 
-// Получаем все кнопки заказа в карточках товаров.
-const orderButtons = document.querySelectorAll('.product-card__button');
-
-// Получаем кнопку закрытия модального окна.
-const closeDialogButton = document.getElementById('close-order-dialog');
-
-// Получаем скрытое поле, в которое будет записан выбранный товар.
-const selectedProductInput = document.getElementById('selected-product');
-
-// Перебираем все кнопки «Заказать».
-orderButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    // Получаем название товара из data-атрибута.
-    const productName = button.dataset.product;
-
-    // Записываем название товара в скрытое поле формы.
-    selectedProductInput.value = productName;
-
-    // Открываем модальное окно.
-    orderDialog.showModal();
-  });
-});
-
-// Закрываем модальное окно по кнопке «Закрыть».
-closeDialogButton.addEventListener('click', () => {
-  orderDialog.close();
-});
-
-// Получаем форму заявки.
-const orderForm = document.getElementById('order-form');
-
-// Получаем сообщение об успешной отправке.
-const successMessage = document.getElementById('success-message');
-
-// Обрабатываем отправку формы.
-orderForm.addEventListener('submit', (event) => {
-  // Отменяем стандартную отправку формы, потому что backend пока не подключён.
-  event.preventDefault();
-
-  // Сбрасываем предыдущие признаки ошибок.
-  const formElements = Array.from(orderForm.elements);
-
-  formElements.forEach((element) => {
-    if (element.willValidate) {
-      element.removeAttribute('aria-invalid');
-    }
-  });
-
-  // Проверяем встроенные HTML-ограничения формы.
-  if (!orderForm.checkValidity()) {
-    formElements.forEach((element) => {
-      if (element.willValidate && !element.checkValidity()) {
-        element.setAttribute('aria-invalid', 'true');
-      }
-    });
-
-    // Показываем стандартные сообщения браузера.
-    orderForm.reportValidity();
-    return;
+  function showSuccess() {
+    if (!toast) return;
+    toast.hidden = false;
+    setTimeout(() => { toast.hidden = true; }, 4000);
   }
 
-  // Показываем сообщение об успешной отправке.
-  successMessage.hidden = false;
+  // ---- Модальное окно ----
+  if (dialog) {
+    const hidden = document.getElementById('selected-product');
+    const label = document.getElementById('dialog-product-name');
+    document.querySelectorAll('[data-product]').forEach((btn) => btn.addEventListener('click', () => {
+      hidden.value = btn.dataset.product;
+      label.textContent = 'Товар: ' + btn.dataset.product;
+      dialog.showModal();
+    }));
+    document.getElementById('close-order-dialog').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (ev) => { if (ev.target === dialog) dialog.close(); });
+  }
 
-  // Очищаем форму.
-  orderForm.reset();
+  // ---- Маска телефона ----
+  document.querySelectorAll('input[type="tel"]').forEach((input) => input.addEventListener('input', () => {
+    let d = input.value.replace(/\D/g, '');
+    if (d.startsWith('7') || d.startsWith('8')) d = d.slice(1);
+    d = d.slice(0, 10);
+    let r = '+7';
+    if (d.length) r += ' (' + d.slice(0, 3);
+    if (d.length >= 3) r += ')';
+    if (d.length > 3) r += ' ' + d.slice(3, 6);
+    if (d.length > 6) r += '-' + d.slice(6, 8);
+    if (d.length > 8) r += '-' + d.slice(8, 10);
+    input.value = r;
+  }));
 
-  // Закрываем модальное окно.
-  orderDialog.close();
+  // ---- Валидация форм ----
+  const messages = {
+    valueMissing: 'Заполните это поле',
+    typeMismatch: 'Проверьте формат значения',
+    patternMismatch: 'Проверьте формат значения',
+    tooShort: 'Слишком короткое значение'
+  };
+  function check(field) {
+    const box = field.closest('.form-field');
+    if (!box) return true;
+    let err = box.querySelector('.form-field__error');
+    if (!err) { err = document.createElement('p'); err.className = 'form-field__error'; box.append(err); }
+    const v = field.validity;
+    const key = Object.keys(messages).find((k) => v[k]);
+    err.textContent = key ? messages[key] : '';
+    box.classList.toggle('form-field--invalid', Boolean(key));
+    return !key;
+  }
+  document.querySelectorAll('form.order-form').forEach((form) => {
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const ok = [...form.elements].filter((f) => f.willValidate).map(check).every(Boolean);
+      if (!ok) { form.querySelector('.form-field--invalid :is(input,select,textarea)')?.focus(); return; }
+      form.reset();
+      form.querySelectorAll('.form-field__error').forEach((p) => { p.textContent = ''; });
+      if (dialog && dialog.open) dialog.close();
+      showSuccess();
+    });
+    form.addEventListener('blur', (ev) => { if (ev.target.willValidate) check(ev.target); }, true);
+  });
+
+  // ---- Фильтры каталога ----
+  const grid = document.getElementById('products-grid');
+  if (grid) {
+    const form = document.getElementById('filters-form');
+    const cards = [...grid.children];
+    const count = document.getElementById('products-count');
+    const empty = document.getElementById('products-empty');
+    function apply() {
+      const cats = [...form.querySelectorAll('input[name="category"]:checked')].map((i) => i.value);
+      const from = Number(form.elements['price-from'].value) || 0;
+      const to = Number(form.elements['price-to'].value) || Infinity;
+      let n = 0;
+      cards.forEach((c) => {
+        const price = Number(c.dataset.price);
+        const show = (!cats.length || cats.includes(c.dataset.category)) && price >= from && price <= to;
+        c.hidden = !show;
+        if (show) n++;
+      });
+      count.textContent = 'Найдено товаров: ' + n;
+      empty.hidden = n > 0;
+    }
+    form.addEventListener('submit', (ev) => { ev.preventDefault(); apply(); });
+    form.addEventListener('change', apply);
+    form.addEventListener('reset', () => setTimeout(apply));
+    apply();
+  }
+
+  // ---- Кнопка «Наверх» ----
+  const top = document.getElementById('to-top');
+  if (top) {
+    window.addEventListener('scroll', () => { top.hidden = window.scrollY < 400; });
+    top.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
 });
