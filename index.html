@@ -1,164 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OliveTech - магазин электроники</title>
-    <meta name="description" content="Интернет-магазин электроники OliveTech - смартфоны, аудио, фототехника и аксессуары с гарантией.">
-    <link rel="stylesheet" href="css/style.css?v=2">
-    <script src="js/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OliveTech — интернет-магазин электроники: ноутбуки, смартфоны, наушники, умные часы и аксессуары с гарантией.">
+  <title>OliveTech — магазин электроники</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
+<body>
 
-<body id="top">
-    <header class="header">
-        <div class="header__inner">
-            <a class="header__logo" href="index.html">OliveTech</a>
-            <nav class="nav">
-                <a class="nav__link" href="index.html">Главная</a>
-                <a class="nav__link" href="catalog.html">Каталог</a>
-                <a class="nav__link" href="order.html">Заявка</a>
-                <a class="nav__link" href="contacts.html">Контакты</a>
-                <a class="nav__link" href="index.html#advantages">Преимущества</a>
-                <a class="nav__link" href="index.html#popular">Популярные товары</a>
-            </nav>
-        </div>
-    </header>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">OliveTech</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <!-- Hero-блок -->
-        <section class="hero">
-            <h1 class="hero__title">Техника, которой приятно пользоваться</h1>
-            <h2 class="hero__subtitle">Мы собрали в одном каталоге лучшие модели с официальной гарантией — от портативных колонок до профессиональных фотокамер.</h2>
-            <a class="btn hero__link" href="catalog.html">Перейти в каталог</a>
-        </section>
+  <main>
+    <section class="hero">
+      <div class="hero__inner">
+        <h1 class="hero__title">Техника, которой приятно пользоваться</h1>
+        <p class="hero__desc">OliveTech — учебный интернет-магазин электроники. Мы собрали только проверенные модели с официальной гарантией.</p>
+        <a class="button button--primary" href="catalog.html">Перейти в каталог</a>
+      </div>
+    </section>
 
-        <!-- Категории -->
-        <section class="categories">
-            <h2 class="categories__title section-title">Категории</h2>
-            <div class="categories__grid">
-                <a class="category-card" href="catalog.html">
-                    <img class="category-card__img" src="images/boom-mini.svg" alt="Аудио">
-                    <span class="category-card__title">Аудио</span>
-                </a>
-                <a class="category-card" href="catalog.html">
-                    <img class="category-card__img" src="images/Keyline75.jpg" alt="Аксессуары">
-                    <span class="category-card__title">Аксессуары</span>
-                </a>
-                <a class="category-card" href="catalog.html">
-                    <img class="category-card__img" src="images/Canon-EOS-R6-Mark2.jpg" alt="Фототехника">
-                    <span class="category-card__title">Фототехника</span>
-                </a>
-            </div>
-        </section>
+    <section class="section" id="popular">
+      <div class="section__head">
+        <h2 class="section__title">Популярные товары</h2>
+      </div>
 
-        <!-- Популярные товары -->
-        <section class="popular" id="popular">
-            <h2 class="popular__title section-title">Популярные товары</h2>
-            <div class="popular__layout">
-                <div class="catalog">
-                    <!-- Товар 1 -->
-                    <article class="card product-card">
-                        <a class="product-card__link" href="product-boom-mini.html">
-                            <div class="product-card__media">
-                                <img class="product-card__img img-cover" src="images/boom-mini.svg" alt="Колонка Sber Boom Mini">
-                                <span class="product-card__badge">Хит продаж</span>
-                            </div>
-                            <h3 class="product-card__title">Колонка Sber Boom Mini</h3>
-                        </a>
-                        <p class="product-card__price">6 990 ₽</p>
-                        <button class="btn product-card__btn" type="button" data-product="Колонка Sber Boom Mini">Заказать</button>
-                    </article>
-                    
-                    <!-- Товар 2 -->
-                    <article class="card product-card">
-                        <a class="product-card__link" href="product-keyline-75.html">
-                            <div class="product-card__media">
-                                <img class="product-card__img img-cover" src="images/Keyline75.jpg" alt="Клавиатура WOBKEY Rainy75">
-                            </div>
-                            <h3 class="product-card__title">Клавиатура WOBKEY Rainy75</h3>
-                        </a>
-                        <p class="product-card__price">8 490 ₽</p>
-                        <button class="btn product-card__btn" type="button" data-product="Клавиатура WOBKEY Rainy75">Заказать</button>
-                    </article>
+      <div class="products-grid">
+        
+        <!-- Карточка 1 -->
+        <article class="product-card product-card--featured">
+          <div class="product-card__media">
+            <img class="product-card__image" src="images/boom-mini.svg" alt="Колонка Sber Boom Mini">
+          </div>
+          <h3 class="product-card__title">Колонка Sber Boom Mini</h3>
+          <p class="product-card__description">Портативная колонка с мощным басом и защитой от воды.</p>
+          <p class="product-card__price">6 990 руб.</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Колонка Sber Boom Mini">Заказать</button>
+        </article>
 
-                    <!-- Товар 3 -->
-                    <article class="card product-card">
-                        <a class="product-card__link" href="product-Canon.html">
-                            <div class="product-card__media">
-                                <img class="product-card__img img-cover" src="images/Canon-EOS-R6-Mark2.jpg" alt="Фотокамера Canon EOS R6 Mark2">
-                            </div>
-                            <h3 class="product-card__title">Фотокамера Canon EOS R6 Mark2</h3>
-                        </a>
-                        <p class="product-card__price">68 990 ₽</p>
-                        <button class="btn product-card__btn" type="button" data-product="Фотокамера Canon EOS R6 Mark2">Заказать</button>
-                    </article>
-                </div>
-                
-                <!-- Боковая панель -->
-                <aside class="card popular__aside">
-                    <h3 class="popular__aside-title">Коротко о покупке</h3>
-                    <ul class="popular__aside-list">
-                        <li>Доставка по России — 1–2 дня</li>
-                        <li>Оплата картой или при получении</li>
-                        <li>Официальная гарантия 12+ месяцев</li>
-                        <li>Проверка устройства при получении</li>
-                    </ul>
-                </aside>
-            </div>
-        </section>
+        <!-- Карточка 2 -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <img class="product-card__image" src="images/Keyline75.jpg" alt="Клавиатура WOBKEY Rainy75">
+          </div>
+          <h3 class="product-card__title">Клавиатура WOBKEY Rainy75</h3>
+          <p class="product-card__description">Механическая клавиатура с горячей заменой переключателей.</p>
+          <p class="product-card__price">8 490 руб.</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Клавиатура WOBKEY Rainy75">Заказать</button>
+        </article>
 
-        <!-- Преимущества -->
-        <section class="advantages-block" id="advantages">
-            <h2 class="advantages-block__title">Наши преимущества:</h2>
-            <ul class="advantages-block__list">
-                <li class="card advantages-block__item">Официальная гарантия</li>
-                <li class="card advantages-block__item">Быстрая доставка</li>
-                <li class="card advantages-block__item">Качественная поддержка на каждом этапе</li>
-            </ul>
-        </section>
+        <!-- Карточка 3 -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <img class="product-card__image" src="images/Canon-EOS-R6-Mark2.jpg" alt="Фотокамера Canon EOS R6 Mark2">
+          </div>
+          <h3 class="product-card__title">Фотокамера Canon EOS R6 Mark2</h3>
+          <p class="product-card__description">Беззеркальная камера с матрицей 24 Мп и записью видео 4K.</p>
+          <p class="product-card__price">68 990 руб.</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Фотокамера Canon EOS R6 Mark2">Заказать</button>
+        </article>
 
-        <!-- О магазине -->
-        <section class="about-teaser">
-            <h2 class="about-teaser__title">О магазине</h2>
-            <p class="about-teaser__text">OliveTech — это магазин электроники, который делает выбор техники простым. Мы работаем с проверенными производителями и честно описываем характеристики.</p>
-            <a class="about-teaser__link" href="contacts.html">Связаться с нами</a>
-        </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <!-- Подвал -->
-    <footer class="footer">
-        <p class="footer__text">&copy; 2026 OliveTech. Все права защищены.</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; 2026 OliveTech. Все права защищены.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка.</p>
+    </div>
+  </footer>
 
-    <!-- Модальное окно -->
-    <dialog class="order-dialog" id="order-dialog">
-        <form class="order-form" id="order-form">
-            <button type="button" class="order-dialog__close" id="close-order-dialog" aria-label="Закрыть">&times;</button>
-            <h2 class="order-form__title">Оформление заявки</h2>
-            <p class="order-form__product">Товар: <span id="dialog-product-name"></span></p>
-            <input type="hidden" name="product" id="selected-product">
+  <!-- Модальное окно -->
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
 
-            <label for="order-name">Имя</label>
-            <input id="order-name" name="name" type="text" required minlength="2" placeholder="Как к вам обращаться">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" required>
+      </div>
 
-            <label for="order-email">E-mail</label>
-            <input id="order-email" name="email" type="email" required placeholder="example@mail.ru">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" required>
+      </div>
 
-            <label for="order-phone">Телефон</label>
-            <input id="order-phone" name="phone" type="tel" inputmode="tel" required placeholder="+7 900 000-00-00">
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить</button>
+      </div>
+    </form>
+  </dialog>
 
-            <label class="order-form__consent">
-                <input type="checkbox" name="consent" required>
-                Согласен(на) на обработку данных
-            </label>
+  <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
 
-            <p class="order-form__success" id="success-message" hidden>Форма успешно отправлена!</p>
-
-            <button type="submit" class="btn order-form__submit">Отправить заявку</button>
-        </form>
-    </dialog>
-
-    <a href="#top" class="back-to-top" aria-label="Наверх">&uarr;</a>
 </body>
 </html>

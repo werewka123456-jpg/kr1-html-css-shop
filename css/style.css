@@ -472,3 +472,46 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===============================
+   Дополнения для картинок и карточек
+   =============================== */
+
+/* Красивый Hero-блок */
+.hero {
+  background-color: var(--color-surface-accent);
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-xl);
+}
+.hero__title { margin-bottom: var(--space-sm); font-size: 2rem; }
+.hero__desc { margin-bottom: var(--space-lg); color: var(--color-muted); max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* Добавляем картинки в карточки */
+.product-card__media {
+  width: 100%;
+  height: 200px;
+  margin-bottom: var(--space-md);
+  background-color: var(--color-surface-accent);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Картинка заполняет блок без искажений */
+}
+
+/* Красивый подвал */
+.site-footer {
+  text-align: center;
+  background-color: var(--color-surface);
+  color: var(--color-text-surface);
+  padding: var(--space-lg);
+  margin-top: var(--space-xl);
+}
