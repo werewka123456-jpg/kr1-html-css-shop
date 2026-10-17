@@ -1,187 +1,164 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="OliveTech — интернет-магазин электроники.">
-  <title>OliveTech — магазин электроники</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OliveTech - магазин электроники</title>
+    <meta name="description" content="Интернет-магазин электроники OliveTech - смартфоны, аудио, фототехника и аксессуары с гарантией.">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <script src="js/main.js" defer></script>
 </head>
-<body>
 
-  <!-- Шапка сайта -->
-  <header class="header">
-    <div class="container">
-      <a class="logo" href="index.html">OliveTech</a>
-      
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="index.html#about">О магазине</a></li>
-          <li><a href="order.html">Заявка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-
-      <a class="btn btn-green" href="order.html">Оставить заявку</a>
-    </div>
-  </header>
-
-  <!-- Основная часть страницы -->
-  <main>
-    
-    <!-- Первый экран (Hero) -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-text">
-          <p class="hero-subtitle">Магазин электроники</p>
-          <h1 class="hero-title">Техника, которой приятно пользоваться каждый день</h1>
-          <p class="hero-desc">OliveTech — учебный интернет-магазин электроники. Мы собрали в одном каталоге лучшие модели с официальной гарантией.</p>
-          <div class="hero-buttons">
-            <a class="btn btn-green" href="catalog.html">Перейти в каталог</a>
-            <a class="btn btn-outline" href="#about">О магазине</a>
-          </div>
+<body id="top">
+    <header class="header">
+        <div class="header__inner">
+            <a class="header__logo" href="index.html">OliveTech</a>
+            <nav class="nav">
+                <a class="nav__link" href="index.html">Главная</a>
+                <a class="nav__link" href="catalog.html">Каталог</a>
+                <a class="nav__link" href="order.html">Заявка</a>
+                <a class="nav__link" href="contacts.html">Контакты</a>
+                <a class="nav__link" href="index.html#advantages">Преимущества</a>
+                <a class="nav__link" href="index.html#popular">Популярные товары</a>
+            </nav>
         </div>
-        <img class="hero-image" src="images/hero.svg" alt="Техника" width="600" height="450">
-      </div>
-    </section>
+    </header>
 
-    <!-- Популярные товары -->
-    <section class="section" id="popular">
-      <div class="container">
-        <div class="section-header">
-          <h2>Популярные товары</h2>
-          <a href="catalog.html" class="link-more">Весь каталог →</a>
-        </div>
-        
-        <div class="products-grid">
-          
-          <!-- Карточка 1: Sber Boom Mini -->
-          <article class="card">
-            <img src="images/boom-mini.svg" alt="Колонка Sber Boom Mini" width="300" height="200">
-            <p class="card-category">Аудио</p>
-            <h3>Колонка Sber Boom Mini</h3>
-            <p class="card-desc">Портативная колонка с мощным басом, защитой от воды и автономностью до 18 часов.</p>
-            <p class="card-price">6 990 руб.</p>
-            <div class="card-actions">
-              <a class="btn btn-outline" href="product-boom-mini.html">Подробнее</a>
-              <a class="btn btn-green" href="order.html">Заказать</a>
+    <main>
+        <!-- Hero-блок -->
+        <section class="hero">
+            <h1 class="hero__title">Техника, которой приятно пользоваться</h1>
+            <h2 class="hero__subtitle">Мы собрали в одном каталоге лучшие модели с официальной гарантией — от портативных колонок до профессиональных фотокамер.</h2>
+            <a class="btn hero__link" href="catalog.html">Перейти в каталог</a>
+        </section>
+
+        <!-- Категории -->
+        <section class="categories">
+            <h2 class="categories__title section-title">Категории</h2>
+            <div class="categories__grid">
+                <a class="category-card" href="catalog.html">
+                    <img class="category-card__img" src="images/boom-mini.svg" alt="Аудио">
+                    <span class="category-card__title">Аудио</span>
+                </a>
+                <a class="category-card" href="catalog.html">
+                    <img class="category-card__img" src="images/Keyline75.jpg" alt="Аксессуары">
+                    <span class="category-card__title">Аксессуары</span>
+                </a>
+                <a class="category-card" href="catalog.html">
+                    <img class="category-card__img" src="images/Canon-EOS-R6-Mark2.jpg" alt="Фототехника">
+                    <span class="category-card__title">Фототехника</span>
+                </a>
             </div>
-          </article>
+        </section>
 
-          <!-- Карточка 2: Клавиатура WOBKEY Rainy75 -->
-          <article class="card">
-            <img src="images/Keyline75.jpg" alt="Клавиатура WOBKEY Rainy75" width="300" height="200">
-            <p class="card-category">Аксессуары</p>
-            <h3>Клавиатура WOBKEY Rainy75</h3>
-            <p class="card-desc">Механическая клавиатура с горячей заменой переключателей и настройкой подсветки.</p>
-            <p class="card-price">8 490 руб.</p>
-            <div class="card-actions">
-              <a class="btn btn-outline" href="product-keyline-75.html">Подробнее</a>
-              <a class="btn btn-green" href="order.html">Заказать</a>
+        <!-- Популярные товары -->
+        <section class="popular" id="popular">
+            <h2 class="popular__title section-title">Популярные товары</h2>
+            <div class="popular__layout">
+                <div class="catalog">
+                    <!-- Товар 1 -->
+                    <article class="card product-card">
+                        <a class="product-card__link" href="product-boom-mini.html">
+                            <div class="product-card__media">
+                                <img class="product-card__img img-cover" src="images/boom-mini.svg" alt="Колонка Sber Boom Mini">
+                                <span class="product-card__badge">Хит продаж</span>
+                            </div>
+                            <h3 class="product-card__title">Колонка Sber Boom Mini</h3>
+                        </a>
+                        <p class="product-card__price">6 990 ₽</p>
+                        <button class="btn product-card__btn" type="button" data-product="Колонка Sber Boom Mini">Заказать</button>
+                    </article>
+                    
+                    <!-- Товар 2 -->
+                    <article class="card product-card">
+                        <a class="product-card__link" href="product-keyline-75.html">
+                            <div class="product-card__media">
+                                <img class="product-card__img img-cover" src="images/Keyline75.jpg" alt="Клавиатура WOBKEY Rainy75">
+                            </div>
+                            <h3 class="product-card__title">Клавиатура WOBKEY Rainy75</h3>
+                        </a>
+                        <p class="product-card__price">8 490 ₽</p>
+                        <button class="btn product-card__btn" type="button" data-product="Клавиатура WOBKEY Rainy75">Заказать</button>
+                    </article>
+
+                    <!-- Товар 3 -->
+                    <article class="card product-card">
+                        <a class="product-card__link" href="product-Canon.html">
+                            <div class="product-card__media">
+                                <img class="product-card__img img-cover" src="images/Canon-EOS-R6-Mark2.jpg" alt="Фотокамера Canon EOS R6 Mark2">
+                            </div>
+                            <h3 class="product-card__title">Фотокамера Canon EOS R6 Mark2</h3>
+                        </a>
+                        <p class="product-card__price">68 990 ₽</p>
+                        <button class="btn product-card__btn" type="button" data-product="Фотокамера Canon EOS R6 Mark2">Заказать</button>
+                    </article>
+                </div>
+                
+                <!-- Боковая панель -->
+                <aside class="card popular__aside">
+                    <h3 class="popular__aside-title">Коротко о покупке</h3>
+                    <ul class="popular__aside-list">
+                        <li>Доставка по России — 1–2 дня</li>
+                        <li>Оплата картой или при получении</li>
+                        <li>Официальная гарантия 12+ месяцев</li>
+                        <li>Проверка устройства при получении</li>
+                    </ul>
+                </aside>
             </div>
-          </article>
+        </section>
 
-          <!-- Карточка 3: Камера Canon EOS R6 Mark2 -->
-          <article class="card">
-            <img src="images/Canon-EOS-R6-Mark2.jpg" alt="Фотокамера Canon EOS R6 Mark2" width="300" height="200">
-            <p class="card-category">Фототехника</p>
-            <h3>Фотокамера Canon EOS R6 Mark2</h3>
-            <p class="card-desc">Беззеркальная камера с матрицей 24 Мп, записью видео 4K и быстрой фокусировкой.</p>
-            <p class="card-price">68 990 руб.</p>
-            <div class="card-actions">
-              <a class="btn btn-outline" href="product-Canon.html">Подробнее</a>
-              <a class="btn btn-green" href="order.html">Заказать</a>
-            </div>
-          </article>
+        <!-- Преимущества -->
+        <section class="advantages-block" id="advantages">
+            <h2 class="advantages-block__title">Наши преимущества:</h2>
+            <ul class="advantages-block__list">
+                <li class="card advantages-block__item">Официальная гарантия</li>
+                <li class="card advantages-block__item">Быстрая доставка</li>
+                <li class="card advantages-block__item">Качественная поддержка на каждом этапе</li>
+            </ul>
+        </section>
 
-        </div>
-      </div>
-    </section>
+        <!-- О магазине -->
+        <section class="about-teaser">
+            <h2 class="about-teaser__title">О магазине</h2>
+            <p class="about-teaser__text">OliveTech — это магазин электроники, который делает выбор техники простым. Мы работаем с проверенными производителями и честно описываем характеристики.</p>
+            <a class="about-teaser__link" href="contacts.html">Связаться с нами</a>
+        </section>
+    </main>
 
-    <!-- О магазине -->
-    <section class="section bg-gray" id="about">
-      <div class="container">
-        <div class="about-block">
-          <div class="about-text">
-            <h2>О магазине</h2>
-            <p>OliveTech — это магазин электроники, который делает выбор техники простым. Мы работаем с проверенными производителями, честно описываем характеристики и не продаём лишнего.</p>
-            <p>Магазин создан в рамках учебного проекта по дисциплине «Фронтенд и бэкенд разработка» и постепенно будет расширяться.</p>
-          </div>
-          <ul class="stats-list">
-            <li><strong>3</strong> товара в каталоге</li>
-            <li><strong>12+</strong> месяцев гарантии</li>
-            <li><strong>1–2</strong> дня доставка</li>
-            <li><strong>24/7</strong> приём заявок</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- Подвал -->
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 OliveTech. Все права защищены.</p>
+    </footer>
 
-    <!-- Преимущества -->
-    <section class="section" id="advantages">
-      <div class="container">
-        <h2>Преимущества</h2>
-        <div class="features-grid">
-          <div class="feature">
-            <span class="feature-icon">🚚</span>
-            <h3>Быстрая доставка</h3>
-            <p>Привезём заказ по городу за 1–2 дня, по стране — за 3–5 дней.</p>
-          </div>
-          <div class="feature">
-            <span class="feature-icon">🛡️</span>
-            <h3>Официальная гарантия</h3>
-            <p>На всю технику даём гарантию от 12 месяцев и помогаем с ремонтом.</p>
-          </div>
-          <div class="feature">
-            <span class="feature-icon">💳</span>
-            <h3>Удобная оплата</h3>
-            <p>Картой, наличными при получении или в рассрочку без переплаты.</p>
-          </div>
-          <div class="feature">
-            <span class="feature-icon">🎧</span>
-            <h3>Поддержка экспертов</h3>
-            <p>Поможем выбрать устройство под ваши задачи и бюджет.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Модальное окно -->
+    <dialog class="order-dialog" id="order-dialog">
+        <form class="order-form" id="order-form">
+            <button type="button" class="order-dialog__close" id="close-order-dialog" aria-label="Закрыть">&times;</button>
+            <h2 class="order-form__title">Оформление заявки</h2>
+            <p class="order-form__product">Товар: <span id="dialog-product-name"></span></p>
+            <input type="hidden" name="product" id="selected-product">
 
-  </main>
+            <label for="order-name">Имя</label>
+            <input id="order-name" name="name" type="text" required minlength="2" placeholder="Как к вам обращаться">
 
-  <!-- Подвал сайта -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-info">
-        <h3>OliveTech</h3>
-        <p>Магазин электроники: ноутбуки, смартфоны, аудио и аксессуары с гарантией и быстрой доставкой.</p>
-      </div>
-      
-      <div class="footer-links">
-        <h3>Разделы</h3>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="order.html">Заявка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-contacts">
-        <h3>Связь</h3>
-        <ul>
-          <li>+7 (968) 077-87-22</li>
-          <li>sofi.kakurina@yandex.ru</li>
-          <li>Ежедневно, 9:00–21:00</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="container">
-      <p class="copyright">© 2026 Учебный проект OliveTech. Дисциплина: Фронтенд и бэкенд разработка.</p>
-    </div>
-  </footer>
+            <label for="order-email">E-mail</label>
+            <input id="order-email" name="email" type="email" required placeholder="example@mail.ru">
 
+            <label for="order-phone">Телефон</label>
+            <input id="order-phone" name="phone" type="tel" inputmode="tel" required placeholder="+7 900 000-00-00">
+
+            <label class="order-form__consent">
+                <input type="checkbox" name="consent" required>
+                Согласен(на) на обработку данных
+            </label>
+
+            <p class="order-form__success" id="success-message" hidden>Форма успешно отправлена!</p>
+
+            <button type="submit" class="btn order-form__submit">Отправить заявку</button>
+        </form>
+    </dialog>
+
+    <a href="#top" class="back-to-top" aria-label="Наверх">&uarr;</a>
 </body>
 </html>
