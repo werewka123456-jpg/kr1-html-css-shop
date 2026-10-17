@@ -52,18 +52,15 @@ a { color: var(--color-primary); text-decoration: none; }
 a:hover { color: var(--color-primary-dark); }
 a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
 
-/* --- БЭМ: site-header --- */
 .site-header { background-color: var(--color-surface); color: var(--color-text-surface); }
 .site-header__inner { max-width: var(--container-width); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md); }
 .site-header__logo { font-weight: bold; color: var(--color-text-surface); }
 
-/* --- БЭМ: site-nav --- */
 .site-nav__list { display: flex; flex-wrap: wrap; gap: var(--space-sm); padding: 0; margin: 0; list-style: none; }
 .site-nav__link { color: var(--color-text-surface); padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-sm); display: inline-block; }
 .site-nav__link:hover { background-color: var(--color-primary-dark); color: var(--color-white); }
 .site-nav__link--active { background-color: var(--color-primary-dark); color: var(--color-white); }
 
-/* --- БЭМ: button --- */
 .button { display: inline-block; padding: var(--space-sm) var(--space-md); border: none; border-radius: var(--radius-sm); font: inherit; cursor: pointer; text-align: center; }
 .button--primary { background-color: var(--color-primary); color: var(--color-white); }
 .button--primary:hover { background-color: var(--color-primary-dark); }
@@ -76,10 +73,8 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 .hero { max-width: var(--container-width); margin: 0 auto var(--space-xl); padding: var(--space-xl); background-color: var(--color-surface-accent); border-radius: var(--radius-lg); }
 .section { max-width: var(--container-width); margin: 0 auto var(--space-xl); }
 
-/* --- БЭМ: products-grid --- */
-.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.products-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); max-width: 600px;}
 
-/* --- БЭМ: product-card --- */
 .product-card { display: flex; flex-direction: column; padding: var(--space-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); background-color: var(--color-bg); }
 .product-card--featured { border-color: var(--color-primary); }
 .product-card__title { margin-top: 0; margin-bottom: var(--space-sm); }
