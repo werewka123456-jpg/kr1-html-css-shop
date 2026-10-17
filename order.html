@@ -3,130 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Оформление заявки в магазине электроники OliveTech.">
-  <title>Оформление заявки — OliveTech</title>
+  <meta name="description" content="Оформление заявки в учебном интернет-магазине.">
+  <title>Оформление заявки – Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Шапка сайта -->
-  <header class="header">
-    <div class="container">
-      <a class="logo" href="index.html">OliveTech</a>
-      
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="index.html#about">О магазине</a></li>
-          <li><a href="order.html">Заявка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
-
-      <a class="btn btn-green" href="order.html">Оставить заявку</a>
     </div>
   </header>
 
-  <!-- Основная часть страницы -->
   <main>
-    <div class="container">
-      
-      <!-- Хлебные крошки -->
-      <nav class="breadcrumbs">
-        <a href="index.html">Главная</a> / Заявка
-      </nav>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Заявка</span>
+    </nav>
 
-      <!-- Блок с формой -->
-      <section class="order-section">
-        <h1>Оформление заявки</h1>
-        <p>Выберите товар и заполните форму — менеджер свяжется с вами в течение рабочего дня.</p>
+    <section class="section">
+      <h1>Оформление заявки</h1>
+      <p>Заполните форму, и мы свяжемся с вами.</p>
 
-        <form class="order-form" action="#" method="post">
-          
-          <div class="form-group">
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" name="phone" placeholder="+7 (900) 000-00-00" required>
-            <small>Формат: +7 (900) 000-00-00</small>
-          </div>
-
-          <div class="form-group">
-            <label for="product">Товар</label>
-            <select id="product" name="product" required>
-              <option value="">Выберите товар</option>
-              <option value="Ноутбук NordBook 14">Ноутбук NordBook 14</option>
-              <option value="Смартфон Olive One 5G">Смартфон Olive One 5G</option>
-              <option value="Наушники Sonar ANC">Наушники Sonar ANC</option>
-              <option value="Смарт-часы Pulse Watch S">Смарт-часы Pulse Watch S</option>
-              <option value="Планшет Slate 11">Планшет Slate 11</option>
-              <option value="Фотокамера Lumen Mirrorless">Фотокамера Lumen Mirrorless</option>
-              <option value="Колонка Boom Mini">Колонка Boom Mini</option>
-              <option value="Монитор Vista 27″ 4K">Монитор Vista 27″ 4K</option>
-              <option value="Клавиатура Keyline 75">Клавиатура Keyline 75</option>
-              <option value="Powerbank Volt 20000">Powerbank Volt 20000</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="comment">Комментарий</label>
-            <textarea id="comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию"></textarea>
-          </div>
-
-          <div class="form-group checkbox-group">
-            <label>
-              <input type="checkbox" name="agreement" required>
-              Я согласен на обработку данных
-            </label>
-          </div>
-
-          <button class="btn btn-green" type="submit">Отправить заявку</button>
-        </form>
-      </section>
-
-    </div>
+      <form class="order-form" action="#" method="post">
+        <div class="order-form__field">
+          <label class="order-form__label" for="name">Имя</label>
+          <input class="order-form__input" id="name" name="name" type="text" required>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="email">E-mail</label>
+          <input class="order-form__input" id="email" name="email" type="email" required>
+        </div>
+        <div class="order-form__actions">
+          <button class="button button--primary" type="submit">Отправить</button>
+        </div>
+      </form>
+    </section>
   </main>
 
-  <!-- Подвал сайта -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-info">
-        <h3>OliveTech</h3>
-        <p>Магазин электроники: ноутбуки, смартфоны, аудио и аксессуары с гарантией и быстрой доставкой.</p>
-      </div>
-      
-      <div class="footer-links">
-        <h3>Разделы</h3>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="order.html">Заявка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-contacts">
-        <h3>Связь</h3>
-        <ul>
-          <li>+7 (968) 077-87-22</li>
-          <li>sofi.kakurina@yandex.ru</li>
-          <li>Ежедневно, 9:00–21:00</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="container">
-      <p class="copyright">© 2026 Учебный проект OliveTech. Дисциплина: Фронтенд и бэкенд разработка.</p>
-    </div>
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   </footer>
 
 </body>

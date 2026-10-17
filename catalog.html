@@ -3,153 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог электроники OliveTech: аудио, аксессуары и фототехника.">
-  <title>Каталог товаров — OliveTech</title>
+  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+  <title>Каталог товаров – Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Шапка сайта -->
-  <header class="header">
-    <div class="container">
-      <a class="logo" href="index.html">OliveTech</a>
-      
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="index.html#about">О магазине</a></li>
-          <li><a href="order.html">Заявка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
-
-      <a class="btn btn-green" href="order.html">Оставить заявку</a>
     </div>
   </header>
 
-  <!-- Основная часть страницы -->
   <main>
-    <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
+    </nav>
+
+    <section class="section">
+      <h1>Каталог товаров</h1>
+      <p>На этой странице представлен учебный каталог товаров.</p>
       
-      <!-- Хлебные крошки -->
-      <nav class="breadcrumbs">
-        <a href="index.html">Главная</a> / Каталог
-      </nav>
+      <div class="products-grid">
+        <article class="product-card">
+          <h3 class="product-card__title">Товар 1</h3>
+          <p class="product-card__description">Краткое описание учебного товара.</p>
+          <p class="product-card__price">Цена: 1000 руб.</p>
+          <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+        </article>
 
-      <!-- Заголовок каталога -->
-      <div class="catalog-header">
-        <h1>Каталог товаров</h1>
-        <p>Электроника OliveTech: выбирайте устройства и оставляйте заявку.</p>
+        <article class="product-card">
+          <h3 class="product-card__title">Товар 2</h3>
+          <p class="product-card__description">Краткое описание учебного товара.</p>
+          <p class="product-card__price">Цена: 1500 руб.</p>
+          <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-card__title">Товар 3</h3>
+          <p class="product-card__description">Краткое описание учебного товара.</p>
+          <p class="product-card__price">Цена: 2000 руб.</p>
+          <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+        </article>
       </div>
-
-      <!-- Сетка каталога (Фильтры + Товары) -->
-      <div class="catalog-layout">
-        
-        <!-- Левая колонка: Фильтры -->
-        <aside class="catalog-filters">
-          <h2>Фильтры</h2>
-          <form action="#" method="get">
-            <div class="filter-group">
-              <h3>Категория</h3>
-              <label><input type="checkbox" name="category" value="audio"> Аудио</label>
-              <label><input type="checkbox" name="category" value="accessories"> Аксессуары</label>
-              <label><input type="checkbox" name="category" value="photo"> Фототехника</label>
-            </div>
-            
-            <div class="filter-group">
-              <h3>Цена, руб.</h3>
-              <label for="price-from">От</label>
-              <input type="number" id="price-from" name="price-from" placeholder="0">
-              <label for="price-to">До</label>
-              <input type="number" id="price-to" name="price-to" placeholder="80000">
-            </div>
-
-            <button class="btn btn-green" type="submit">Применить</button>
-          </form>
-        </aside>
-
-        <!-- Правая колонка: Список товаров -->
-        <div class="catalog-products">
-          <div class="products-grid">
-            
-            <!-- Товар 1: Sber Boom Mini -->
-            <article class="card">
-              <img src="images/boom-mini.svg" alt="Колонка Sber Boom Mini" width="300" height="200">
-              <p class="card-category">Аудио</p>
-              <h3>Колонка Sber Boom Mini</h3>
-              <p class="card-desc">Портативная колонка с мощным басом и защитой от воды.</p>
-              <p class="card-price">6 990 руб.</p>
-              <div class="card-actions">
-                <a class="btn btn-outline" href="product-boom-mini.html">Подробнее</a>
-                <a class="btn btn-green" href="order.html">Заказать</a>
-              </div>
-            </article>
-
-            <!-- Товар 2: Клавиатура WOBKEY Rainy75 -->
-            <article class="card">
-              <img src="images/Keyline75.jpg" alt="Клавиатура WOBKEY Rainy75" width="300" height="200">
-              <p class="card-category">Аксессуары</p>
-              <h3>Клавиатура WOBKEY Rainy75</h3>
-              <p class="card-desc">Механическая клавиатура 75% с горячей заменой переключателей.</p>
-              <p class="card-price">8 490 руб.</p>
-              <div class="card-actions">
-                <a class="btn btn-outline" href="product-keyline-75.html">Подробнее</a>
-                <a class="btn btn-green" href="order.html">Заказать</a>
-              </div>
-            </article>
-
-            <!-- Товар 3: Canon EOS R6 Mark2 -->
-            <article class="card">
-              <img src="images/Canon-EOS-R6-Mark2.jpg" alt="Фотокамера Canon EOS R6 Mark2" width="300" height="200">
-              <p class="card-category">Фототехника</p>
-              <h3>Фотокамера Canon EOS R6 Mark2</h3>
-              <p class="card-desc">Беззеркальная камера с матрицей 24 Мп и записью видео 4K.</p>
-              <p class="card-price">68 990 руб.</p>
-              <div class="card-actions">
-                <a class="btn btn-outline" href="product.html">Подробнее</a>
-                <a class="btn btn-green" href="order.html">Заказать</a>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
+    </section>
   </main>
 
-  <!-- Подвал сайта -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-info">
-        <h3>OliveTech</h3>
-        <p>Магазин электроники: ноутбуки, смартфоны, аудио и аксессуары с гарантией и быстрой доставкой.</p>
-      </div>
-      
-      <div class="footer-links">
-        <h3>Разделы</h3>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="order.html">Заявка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-contacts">
-        <h3>Связь</h3>
-        <ul>
-          <li>+7 (968) 077-87-22</li>
-          <li>sofi.kakurina@yandex.ru</li>
-          <li>Ежедневно, 9:00–21:00</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="container">
-      <p class="copyright">© 2026 Учебный проект OliveTech. Дисциплина: Фронтенд и бэкенд разработка.</p>
-    </div>
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   </footer>
 
 </body>

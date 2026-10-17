@@ -3,123 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контакты магазина электроники OliveTech: телефон, e-mail, адрес и форма обратной связи.">
-  <title>Контакты — OliveTech</title>
+  <meta name="description" content="Контактная информация учебного интернет-магазина.">
+  <title>Контакты – Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Шапка сайта -->
-  <header class="header">
-    <div class="container">
-      <a class="logo" href="index.html">OliveTech</a>
-      
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="index.html#about">О магазине</a></li>
-          <li><a href="order.html">Заявка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
-
-      <a class="btn btn-green" href="order.html">Оставить заявку</a>
     </div>
   </header>
 
-  <!-- Основная часть страницы -->
   <main>
-    <div class="container">
-      
-      <!-- Хлебные крошки -->
-      <nav class="breadcrumbs">
-        <a href="index.html">Главная</a> / Контакты
-      </nav>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Контакты</span>
+    </nav>
 
-      <!-- Блок контактов -->
-      <section class="contacts-section">
-        
-        <!-- Левая колонка: Информация -->
-        <div class="contacts-info">
-          <h1>Контакты</h1>
-          <p>Свяжитесь с нами любым удобным способом — поможем выбрать технику и ответим на вопросы по заказу.</p>
-          
-          <ul class="contacts-list">
-            <li><strong>Телефон:</strong> +7 (968) 077-87-22</li>
-            <li><strong>E-mail:</strong> sofi.kakurina@yandex.ru</li>
-            <li><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</li>
-            <li><strong>Время работы:</strong> ежедневно, 9:00–21:00</li>
-          </ul>
-        </div>
-
-        <!-- Правая колонка: Форма обратной связи -->
-        <div class="contacts-form">
-          <h2>Обратная связь</h2>
-          
-          <form class="order-form" action="#" method="post">
-            <div class="form-group">
-              <label for="name">Имя</label>
-              <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
-            </div>
-
-            <div class="form-group">
-              <label for="comment">Комментарий</label>
-              <textarea id="comment" name="comment" rows="4" placeholder="Укажите ваш вопрос"></textarea>
-            </div>
-
-            <div class="form-group checkbox-group">
-              <label>
-                <input type="checkbox" name="agreement" required>
-                Я согласен на обработку данных
-              </label>
-            </div>
-
-            <button class="btn btn-green" type="submit">Отправить</button>
-          </form>
-        </div>
-
-      </section>
-
-    </div>
+    <section class="section">
+      <h1>Контакты</h1>
+      <p>Здесь размещается контактная информация учебного интернет-магазина.</p>
+      <ul>
+        <li>Телефон: +7 (900) 000-00-00</li>
+        <li>E-mail: info@example.com</li>
+        <li>Адрес: г. Москва, учебный проект</li>
+      </ul>
+    </section>
   </main>
 
-  <!-- Подвал сайта -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-info">
-        <h3>OliveTech</h3>
-        <p>Магазин электроники: ноутбуки, смартфоны, аудио и аксессуары с гарантией и быстрой доставкой.</p>
-      </div>
-      
-      <div class="footer-links">
-        <h3>Разделы</h3>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="order.html">Заявка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-contacts">
-        <h3>Связь</h3>
-        <ul>
-          <li>+7 (968) 077-87-22</li>
-          <li>sofi.kakurina@yandex.ru</li>
-          <li>Ежедневно, 9:00–21:00</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="container">
-      <p class="copyright">© 2026 Учебный проект OliveTech. Дисциплина: Фронтенд и бэкенд разработка.</p>
-    </div>
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   </footer>
 
 </body>
