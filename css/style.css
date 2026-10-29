@@ -35,9 +35,13 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-bg);
