@@ -180,7 +180,8 @@ a:focus-visible {
 }
 
 .hero__text p {
-  font-size: 1.1rem;
+  font-size: 2.2rem;
+  line-height: 1.6;
   margin-bottom: var(--space-md);
   color: var(--color-text);
 }
