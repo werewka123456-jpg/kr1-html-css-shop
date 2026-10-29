@@ -195,11 +195,12 @@ a:focus-visible {
   flex: 1;
   display: flex;
   justify-content: center;
+   align-items: center;
 }
 
 .hero__image {
-  max-width: 100%;
-  height: auto;
+  max-width: 400px;
+  height: 100%;
   border-radius: var(--radius-lg);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
 }
