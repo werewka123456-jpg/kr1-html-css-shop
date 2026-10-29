@@ -167,6 +167,44 @@ a:focus-visible {
   border-radius: var(--radius-lg);
 }
 
+.hero__content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.hero__text {
+  flex: 1;
+}
+
+.hero__text p {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.hero__image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+}
+
+
 .section {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
@@ -179,6 +217,44 @@ a:focus-visible {
   gap: var(--space-lg);
   max-width: 90%;
   margin: 0 auto; /* Центрируем сетку */
+}
+
+/* Сетка преимуществ */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: var(--color-bg);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.feature-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 768px) {
+  .hero__content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- Карточка товара --- */
