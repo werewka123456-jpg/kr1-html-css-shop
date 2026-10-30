@@ -168,10 +168,12 @@ a:focus-visible {
 }
 
 .hero__content {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xl);
-  max-width: var(--container-width);
+ display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  text-align: center;    
+  gap: var(--space-xl);  
+  max-width: 800px;       
   margin: 0 auto;
 }
 
@@ -188,6 +190,7 @@ a:focus-visible {
 
 .hero__actions {
   display: flex;
+  justify-content: center;
   gap: var(--space-md);
   margin-top: var(--space-lg);
 }
