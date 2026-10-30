@@ -2,17 +2,17 @@
    1. Переменные проекта
    =============================== */
 :root {
-  --color-bg: #F0FDF4;
-  --color-text: #14532D;
-  --color-text-surface: #F0FDF4;
-  --color-muted: #5B6B5F;
-  --color-primary: #166534;
-  --color-primary-dark: #0F3D22;
-  --color-border: #D6E4D9;
-  --color-surface: #166534;
-  --color-surface-accent: #DCFCE7;
-  --color-success: #166534;
-  --color-success-bg: #DCFCE7;
+  --color-bg: #F8F9F3;
+  --color-text: #2F3B24;
+  --color-text-surface: #F8F9F3;
+  --color-muted: #6B7A5B;
+  --color-primary: #556B2F;
+  --color-primary-dark: #3F4E22;
+  --color-border: #D6DCC8;
+  --color-surface: #222B17;
+  --color-surface-accent: #E8EBDD;
+  --color-success: #3F4E22;
+  --color-success-bg: #E8EBDD;
   --color-white: #ffffff;
 
   --space-xs: 4px;
