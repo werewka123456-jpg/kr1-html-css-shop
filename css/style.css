@@ -29,6 +29,7 @@
   --line-height-base: 1.6;
   --font-size: 2.2rem;
   --front-size-h1: 2.5rem;
+  --font-size-desc: 1rem;
 
   --container-width: 1100px;
 }
@@ -49,7 +50,7 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   line-height: var(--line-height-base);
-  font-size: var(--font-size);
+  font-size: var(--font-base);
   color: var(--color-text);
   background-color: var(--color-bg);
 }
@@ -315,12 +316,14 @@ a:focus-visible {
 
 /* --- Текст в карточке --- */
 .product-card__title {
+  font-size: var(--font-size-h1);
   margin-top: 0;
   margin-bottom: var(--space-sm);
 }
 
 .product-card__description {
   color: var(--color-muted);
+  font-size: var(--font-size-desc);
   margin-bottom: var(--space-sm);
 }
 
