@@ -181,6 +181,12 @@ a:focus-visible {
   flex: 1;
 }
 
+.hero__text h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
 .hero__text p {
   font-size: 2.2rem;
   line-height: 1.6;
