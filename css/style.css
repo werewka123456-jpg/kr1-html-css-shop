@@ -52,6 +52,9 @@ body {
   line-height: var(--line-height-base);
   font-size: var(--font-base);
   color: var(--color-text);
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
   background-color: var(--color-bg);
 }
 
