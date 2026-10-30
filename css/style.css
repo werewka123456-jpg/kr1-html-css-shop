@@ -197,8 +197,14 @@ a:focus-visible {
 .hero__actions {
   display: flex;
   justify-content: center;
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl)
+}
+
+.hero__action .button{
+  padding: 16px 32 px;
+  font-size: 1.1rem;
 }
 
 .hero__image-wrapper {
