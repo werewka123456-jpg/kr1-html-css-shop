@@ -236,7 +236,7 @@ a:focus-visible {
 /* --- Сетка карточек --- */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: var(--space-lg);
   max-width: 90%;
   margin: 0 auto; /* Центрируем сетку */
