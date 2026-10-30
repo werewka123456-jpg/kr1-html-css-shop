@@ -203,8 +203,8 @@ a:focus-visible {
 }
 
 .hero__actions .button{
-  padding: 32px 64px;
-  font-size: 2.2rem;
+  padding: 16px 32px;
+  font-size: 1.2rem;
 }
 
 .hero__image-wrapper {
