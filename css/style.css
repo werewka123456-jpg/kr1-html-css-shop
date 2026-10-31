@@ -53,6 +53,8 @@ body {
   font-size: var(--font-base);
   color: var(--color-text);
   background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
 }
 
 header, main, footer {
